@@ -832,3 +832,6 @@ numbers.forEach(num => {
 });
 ```
 In this example, the type of `num` is inferred to be `number` based on its usage within the `forEach` method, which expects a callback function that takes a `number` as an argument.
+
+#### TypeScript syntax to create function overloads
+Function overloads in TypeScript allow you to define multiple function signatures for a single function implementation. This is useful when you want a function to behave differently based on the types or number of arguments passed to it.
