@@ -814,3 +814,9 @@ node --inspect-brk dist/index.js
 #### The purpose of noImplicitAny
 
 The `noImplicitAny` option in TypeScript is a compiler setting that helps catch potential errors related to the use of the `any` type. When this option is enabled, TypeScript will raise an error whenever it infers a variable or parameter to be of type `any` without an explicit type annotation.
+
+```typescript
+function greet(name) { // Error: Parameter 'name' implicitly has an 'any' type.
+  return "Hello, " + name;
+}
+```
