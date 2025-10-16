@@ -824,3 +824,11 @@ function greet(name) { // Error: Parameter 'name' implicitly has an 'any' type.
 #### Contextual typing
 
 Contextual typing is a feature in TypeScript that allows the type of a variable to be inferred based on its usage context. This means that TypeScript can determine the type of a variable by looking at how it is used in the code, rather than relying solely on explicit type annotations.
+
+```typescript
+let numbers = [1, 2, 3];
+numbers.forEach(num => {
+  console.log(num.toFixed(2)); // 'num' is contextually typed as 'number'
+});
+```
+In this example, the type of `num` is inferred to be `number` based on its usage within the `forEach` method, which expects a callback function that takes a `number` as an argument.
