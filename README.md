@@ -850,3 +850,16 @@ In this example, the `add` function has two overloads: one for adding two number
 #### Symbol type in TypeScript
 
 The `symbol` type in TypeScript represents a unique and immutable value that can be used as an identifier for object properties. Symbols are often used to create private or non-enumerable properties in objects, as they do not collide with string-based property names.
+
+```typescript
+let sym1 = Symbol("uniqueIdentifier");
+let sym2 = Symbol("uniqueIdentifier");
+console.log(sym1 === sym2); // false, each symbol is unique
+let obj = {
+  [sym1]: "Value associated with sym1",
+  [sym2]: "Value associated with sym2"
+};
+console.log(obj[sym1]); // "Value associated with sym1"
+console.log(obj[sym2]); // "Value associated with sym2"
+```
+In this example, `sym1` and `sym2` are two distinct symbols, even though they have the same description. They are used as keys in the `obj` object, allowing for unique property names that won't conflict with other properties.
