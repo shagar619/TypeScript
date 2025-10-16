@@ -820,3 +820,7 @@ function greet(name) { // Error: Parameter 'name' implicitly has an 'any' type.
   return "Hello, " + name;
 }
 ```
+
+#### Contextual typing
+
+Contextual typing is a feature in TypeScript that allows the type of a variable to be inferred based on its usage context. This means that TypeScript can determine the type of a variable by looking at how it is used in the code, rather than relying solely on explicit type annotations.
