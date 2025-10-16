@@ -835,3 +835,14 @@ In this example, the type of `num` is inferred to be `number` based on its usage
 
 #### TypeScript syntax to create function overloads
 Function overloads in TypeScript allow you to define multiple function signatures for a single function implementation. This is useful when you want a function to behave differently based on the types or number of arguments passed to it.
+
+```typescript
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any): any {
+  return a + b;
+}
+let sum1 = add(5, 10); // sum1 is of type number
+let sum2 = add("Hello, ", "World!"); // sum2 is of type string
+```
+In this example, the `add` function has two overloads: one for adding two numbers and another for concatenating two strings. The actual implementation of the function uses the `any` type to handle both cases, but TypeScript ensures that the correct types are used based on the provided arguments.
