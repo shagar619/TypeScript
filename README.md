@@ -846,3 +846,7 @@ let sum1 = add(5, 10); // sum1 is of type number
 let sum2 = add("Hello, ", "World!"); // sum2 is of type string
 ```
 In this example, the `add` function has two overloads: one for adding two numbers and another for concatenating two strings. The actual implementation of the function uses the `any` type to handle both cases, but TypeScript ensures that the correct types are used based on the provided arguments.
+
+#### Symbol type in TypeScript
+
+The `symbol` type in TypeScript represents a unique and immutable value that can be used as an identifier for object properties. Symbols are often used to create private or non-enumerable properties in objects, as they do not collide with string-based property names.
