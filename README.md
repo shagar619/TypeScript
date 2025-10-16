@@ -809,3 +809,8 @@ node --inspect-brk dist/index.js
 ```
 - **`--inspect-brk`**: Starts the Node.js process in debug mode and breaks before the first line of code, allowing you to set breakpoints and inspect variables.
 - **`dist/index.js`**: The compiled JavaScript file to debug.
+
+
+#### The purpose of noImplicitAny
+
+The `noImplicitAny` option in TypeScript is a compiler setting that helps catch potential errors related to the use of the `any` type. When this option is enabled, TypeScript will raise an error whenever it infers a variable or parameter to be of type `any` without an explicit type annotation.
